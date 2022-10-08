@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const axiosInstance = axios.create({
+const AxiosInstance = axios.create({
     baseURL: "https://craft123.herokuapp.com"
 })
 
-export default axiosInstance;
+export default AxiosInstance;
