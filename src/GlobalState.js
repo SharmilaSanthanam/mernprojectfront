@@ -2,8 +2,8 @@ import React, {createContext, useState, useEffect} from 'react'
 import ProductsAPI from './api/ProductsAPI'
 import UserAPI from './api/UserAPI'
 import CategoriesAPI from './api/CategoriesAPI'
-
-import AxiosInstance from './config'
+import axios from 'axios'
+// import AxiosInstance from './config'
 
 export const GlobalState = createContext()
 
@@ -16,7 +16,8 @@ export const DataProvider = ({children}) =>{
         const firstLogin = localStorage.getItem('firstLogin')
         if(firstLogin){
             const refreshToken = async () =>{
-                const res = await AxiosInstance.get('/user/refresh_token')
+                const res = await axios.get('https://craft123.herokuapp.com//user/refresh_token')
+//                    const res = await AxiosInstance.get('/user/refresh_token')
         
                 setToken(res.data.accesstoken)
     
