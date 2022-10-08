@@ -16,7 +16,7 @@ export const DataProvider = ({children}) =>{
         const firstLogin = localStorage.getItem('firstLogin')
         if(firstLogin){
             const refreshToken = async () =>{
-                const res = await axios.get('https://craft123.herokuapp.com/user/refresh_token')
+                const res = await axios.get(`https://craft123.herokuapp.com/user/refresh_token`)
 //                    const res = await AxiosInstance.get('/user/refresh_token')
         console.log(res.data.accesstoken)
                 setToken(res.data.accesstoken)
