@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {NavLink} from 'react-router-dom'
-import axiosInstance from '../../config'
+// import axiosInstance from '../../config'
+import axios from 'axios'
 import './login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,8 +31,8 @@ function Login() {
     const loginSubmit = async e =>{
         e.preventDefault()
         try {
-            await axiosInstance.post('/user/login', {...user})
-
+            await axios.post('https://craft123.herokuapp.com/user/login', {...user})
+//  await axiosInstance.post('/user/login', {...user})
             localStorage.setItem('firstLogin', true)
             
             window.location.href = "/";
