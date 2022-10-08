@@ -12,7 +12,7 @@ function UserAPI(token) {
         if(token){
             const getUser = async () =>{
                 try {
-                    const res = await axios.get('https://craft123.herokuapp.com//user/infor', {
+                    const res = await axios.get('https://craft123.herokuapp.com/user/infor', {
 //                     const res = await axiosInstance.get('/user/infor', {
                         headers: {Authorization: token}
                     })
@@ -41,7 +41,7 @@ function UserAPI(token) {
 
         if(check){
             setCart([...cart, {...product, quantity: 1}])
- await axios.patch('https://craft123.herokuapp.com//user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
+ await axios.patch('https://craft123.herokuapp.com/user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
             //await axiosInstance.patch('/user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
                 headers: {Authorization: token}
             })
