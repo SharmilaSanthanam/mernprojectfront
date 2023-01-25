@@ -31,7 +31,7 @@ function Login() {
     const loginSubmit = async e =>{
         e.preventDefault()
         try {
-            await axios.post('https://craft123.herokuapp.com/user/login', {...user})
+            await axios.post('https://craftproject.onrender.com/user/login', {...user})
 //  await axiosInstance.post('/user/login', {...user})
             localStorage.setItem('firstLogin', true)
             
