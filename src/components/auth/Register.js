@@ -31,7 +31,7 @@ function Register() {
     const registerSubmit = async e =>{
         e.preventDefault()
         try {
-            await axios.post('https://craft123.herokuapp.com/user/register', {...user})
+            await axios.post('https://craftproject.onrender.com/user/register', {...user})
 // await axiosInstance.post('/user/register', {...user})
 
             localStorage.setItem('firstLogin', true)
